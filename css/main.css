@@ -308,13 +308,11 @@ h2 ~ p {
 }
 
 /* HERO STYLES */
-.full-hero {
+.home-top {
   background-color: #c7dbfc;
   background-size: cover;
   box-sizing: border-box;
   height: 90vh;
-}
-.hero-home {
   background-image: url(/images/astro_4.png);
   background-position: center top;
   display: flex;
