@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>final</title>
+<title>titanic</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,14 +13077,36 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-Learning-and-the-Titanic-Data-Set">Machine Learning and the Titanic Data Set<a class="anchor-link" href="#Machine-Learning-and-the-Titanic-Data-Set">&#182;</a></h1><h3 id="A-generalised-approach">A generalised approach<a class="anchor-link" href="#A-generalised-approach">&#182;</a></h3>
+<h1 id="Titanic-Survival">Titanic Survival<a class="anchor-link" href="#Titanic-Survival">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We start by importing the necessary libraries.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The purpose of this project is to demonstrate competency in the fundamentals of data science, including exploratory data analysis, data pre-processing, feature engineering, and machine learning and hyper parameter tuning. The problem explored is the Kaggle Titanic survival open-ended challenge. While both the challenge and the data set are simpler in nature and have been thoroughly explored, they provide a comfortable environment to practice proficiency in many of the basic concepts and their applications.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Import the necessary libraries.</p>
 
 </div>
 </div>
@@ -13126,7 +13148,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Import csv files to pandas DataFrame.</p>
+<p>Read csv files as a pandas DataFrame.</p>
 
 </div>
 </div>
@@ -13144,13 +13166,6 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h2>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13810,8 +13825,8 @@ memory usage: 83.5+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Both men and women were more likely to have a lower Pclass and survive if they embarked at Cherbourg. The discrepency to which women survived more than men was lowest for those who embarkded at Southampton. Men particularly suffered if they were from Queenstown. Women who embarked at Queenstown appeared to out survive the rest when each Pclass is compared individually, but this is not the case in the overall group.</p>
-<p>This highlights the limiation of the above visualisation. There were only two women of Pclass 2, and one women of Plcass 1, who embarked at Queenscliff. Thus the breakdown by Pclass often reduces the sample size to insignificant numbers which cannnot relay statistically meaningfull information. Likewise, it would seem, men from Queenstown faired better if they were in Pclass 3, however in each of Pclass 1 and 2 there was only one male.</p>
+<p>Both men and women were more likely to have a lower Pclass and survive if they embarked at Cherbourg. The discrepancy to which women survived more than men was lowest for those who embarked at Southampton. Men particularly suffered if they were from Queenstown. Women who embarked at Queenstown appeared to out survive the rest when each Pclass is compared individually, but this is not the case in the overall group.</p>
+<p>This highlights the limitations of the above visualisation. There were only two women of Pclass 2, and one women of Plcass 1, who embarked at Queenscliff. Thus the breakdown by Pclass often reduces the sample size to insignificant numbers which cannot relay statistically meaningful information. Likewise, it would seem, men from Queenstown fared better if they were in Pclass 3, however in each of Pclass 1 and 2 there was only one male.</p>
 
 </div>
 </div>
@@ -13826,7 +13841,7 @@ memory usage: 83.5+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us examine the survival for every whole number age.</p>
+<p>Let us examine the survival for people grouped on whole number age.</p>
 
 </div>
 </div>
@@ -13920,7 +13935,7 @@ memory usage: 83.5+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The breakdown by age with a bin size of one year gives a detailed picture but it is difficult to make out any trends.</p>
+<p>The breakdown by age with a bin size of one year gives a detailed picture but it is difficult to make out any trends. Let us create bins with an eight year size.</p>
 
 </div>
 </div>
@@ -14383,7 +14398,7 @@ memory usage: 83.5+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The missing data has a lower survival ratio than the present data by about 0.1. It is a reasonable assumption the missingness of our age data depends on the other features. This allows us to classify the missingness as missing at randon, which has important implications for future data imputation.</p>
+<p>The missing data has a significantly lower survival ratio than the present data by about 0.1. Thus it is a reasonable assumption the missingness of our age data depends on the other features. For example, data missingness could correlate with Pclass, and we know Pclass correlates with survival, thus explaing the correlation between data missingness and survival. This allows us to classify the missingness as missing at randon, which has important implications for future data imputation.</p>
 
 </div>
 </div>
@@ -14697,7 +14712,7 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One can see with the Abelseth, Ali, and Allen families the tickit number varies amoungst its members. As for the Allen family it is aparent that the two ticket numbers represent two unrelated individuals which is in contrast with the other two offenders of whom only the last digit varies. It is the case that occasionally the last digit of a ticket number varies amoungst families. To remedy this we can change the last digit of all ticket numbers to a constant symbol, say'X', or merely drop it. When the varying ticket numbers represent two different parties the inclusion of the surname number as well as other features within the family id will seperate the two parties.</p>
+<p>One can see with the Abelseth, Ali, and Allen families the tickit number varies amongst its members. As for the Allen family it is apparent that the two ticket numbers represent two unrelated individuals which is in contrast with the other two offenders of whom only the last digit varies. It is the case that occasionally the last digit of a ticket number varies amongst families. To remedy this we can change the last digit of all ticket numbers to a constant symbol, say 'X', or merely drop it. When the varying ticket numbers represent two different parties the inclusion of the surname number as well as other features within the family id will separate the two parties.</p>
 
 </div>
 </div>
@@ -15243,7 +15258,7 @@ PassengerId
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Having sorted first by the Male_Adult category it is clear almost all male adults die. With this our feature should predict all adult males die. Thus we now want to drop the adult males from further participation in this feature.</p>
+<p>Having sorted first by the Male_Adult category it is clear almost all male adults die. Considering this, our feature should predict all adult males die. We now want to drop the adult males from further participation in this feature.</p>
 <p>Even though those males who do live come from a family where all the remaining members live there are also instances where every other family member lives and the male adult dies. Additionally by no means does a male adult's death implicates the death of the others. Thus we can not determine the fate of the male adult from the fate of the group and the fate of the group seems unperturbed by the death of the male adult.</p>
 <p>Those members whose familial position is unknown were apart of families who died. So there is likely some causality between the absence of age data and ones family having perished.</p>
 <p>We also want to remove those families for whom all members are in the testing set since we do not know if any of them survived or not.</p>
