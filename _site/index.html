@@ -39,6 +39,22 @@
 
         .w3-bar-item{padding:8px 1.5vw;float:left;width:auto;border:none;display:block;outline:0}
 
+        .w3-hover-opacity {
+            text-decoration:none;
+        }
+<!--
+        .w3-row-padding>.w3-third {
+            padding: 0 8px;
+        }
+
+
+        @media (min-width:601px) {
+            .w3-third {
+                float:none;
+            }
+        }
+-->
+
         /* END: [W3.CSS Class Overrides]   */
 
         /* New Classes */
@@ -53,6 +69,50 @@
             color:#ff9800;
         }
 
+
+        .text-pill {
+            border: none;
+            color: white;
+            padding: 0px 3px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0px 0px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size:10px;
+
+
+        }
+        .text-pill.python {background-color: #9E372C;}
+        .text-pill.python::before {content: "PYTHON";}
+
+        .text-pill.nlp {background-color: #3C803C;}
+        .text-pill.nlp::before {content: "NLP";}
+
+        .text-pill.dl {background-color: #3C3A82;}
+        .text-pill.dl::before {content: "DL";}
+
+
+        .text-pill.r {background-color: #682E56;}
+        .text-pill.r::before {content: "R";}
+
+        .text-pill.fortran {background-color: #C88402;}
+        .text-pill.fortran::before {content: "FORTRAN";}
+
+        .text-pill.ml {background-color: #A5719D;}
+        .text-pill.ml::before {content: "ML";}
+
+        .text-pill.bayesian {background-color: #3A8277;}
+        .text-pill.bayesian::before {content: "BAYESIAN STATS";}
+
+        .text-pill.physics {background-color: #636363;}
+        .text-pill.physics::before {content: "PHYSICS";}
+
+        .text-pill.rdb {background-color: #9B8A3D;}
+        .text-pill.rdb::before {content: "RDB";}
+
+        .float-none {float:none;}
 
     </style>
 </head>
@@ -171,8 +231,7 @@
                         <p class="w3-text-grey">noah@smithsalive.com</p>
                     </div>
                 </div>
-<!--                <hr>-->
-<!--            </div>-->
+            </div>
         </section>
 
         <!-- PORTFOLIO SECTION -->
@@ -180,75 +239,137 @@
              <div class="w3-container">
                 <h1 class="w3-text-orange"><b>Portfolio</b></h1>
             </div>
+<!--
+            <div class="w3-table" >
+                <div class="w3-row-padding" style="display:table-row;">
+                    <div class="w3-cell w3-third float-none " style="display:table-cell;" >
+                        <a href="projects/titanic/" class="w3-hover-opacity">
+                            <img src="projects/titanic/pf_titanic.jpg" alt="Titanic survival" style="width:100%" >
+                            <div class="w3-container w3-white">
+                                <p><b>Titanic Survival</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                                    congue gravida diam non fringilla.</p>
+                                <p>
+                                    <span class="text-pill nlp"></span>
+                                    <span class="text-pill dl"></span>
+                                    <span class="text-pill python"></span>
+                                    <span class="text-pill r"></span>
+                                    <span class="text-pill fortran"></span>
+                                    <span class="text-pill ml"></span>
+                                    <span class="text-pill bayesian"></span>
+                                    <span class="text-pill physics"></span>
+                                    <span class="text-pill rdb"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-cell w3-third float-none" style="display:table-cell" >
+                        <a href="projects/tidal-stripping/" class="w3-hover-opacity">
+                            <img src="projects/tidal-stripping/pf-tidal-stripping.jpg" alt="Tidal stripping" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>Tidal Stripping</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-cell w3-third float-none" style="display:table-cell;" >
+                        <a href="projects/sugarcane/" class="w3-hover-opacity">
+                            <img src="projects/sugarcane/pf-sugarcane.jpg" alt="Sugarcane polygones" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>Sugarcane Polygons</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-            <!-- First Portfolio Item Grid-->
-            <div class="w3-row-padding">
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="projects/titanic/" class="w3-hover-opacity">
-                        <img src="projects/titanic/pf_titanic.jpg" alt="Titanic survival" style="width:100%" >
-                        <div class="w3-container w3-white">
-                            <p><b>Titanic Survival</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                congue gravida diam non fringilla.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="projects/tidal-stripping/" class="w3-hover-opacity">
-                        <img src="projects/tidal-stripping/pf-tidal-stripping.jpg" alt="Tidal stripping" style="width:100%">
-                        <div class="w3-container w3-white">
-                            <p><b>Tidal Stripping</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                congue gravida diam non fringilla.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3-third w3-container">
-                    <a href="projects/sugarcane/" class="w3-hover-opacity">
-                        <img src="projects/sugarcane/pf-sugarcane.jpg" alt="Sugarcane polygones" style="width:100%">
-                        <div class="w3-container w3-white">
-                            <p><b>Sugarcane Polygons</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                congue gravida diam non fringilla.</p>
-                        </div>
-                    </a>
-                </div>
             </div>
+            <p></p>-->
 
-            <!-- Second Portfolio Item Grid-->
-            <div class="w3-row-padding">
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="projects/dbnormal/" class="w3-hover-opacity">
-                        <img src="projects/dbnormal/pf-dbnormal.jpg" alt="Database normalisation" style="width:100%">
-                        <div class="w3-container w3-white">
-                            <p><b>Database Normalisation</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                                ultricies
-                                congue gravida diam non fringilla.</p>
-                        </div>
-                    </a>
+            <div class="w3-table" >
+
+                <div class="w3-row-padding">
+
+                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
+                        <a href="projects/titanic/" class="w3-hover-opacity">
+                            <img src="projects/titanic/pf_titanic.jpg" alt="Titanic survival" style="width:100%" >
+                            <div class="w3-container w3-white">
+                                <p><b>Titanic Survival</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                                    congue gravida diam non fringilla.</p>
+                                <p>
+                                    <span class="text-pill nlp"></span>
+                                    <span class="text-pill dl"></span>
+                                    <span class="text-pill python"></span>
+                                    <span class="text-pill r"></span>
+                                    <span class="text-pill fortran"></span>
+                                    <span class="text-pill ml"></span>
+                                    <span class="text-pill bayesian"></span>
+                                    <span class="text-pill physics"></span>
+                                    <span class="text-pill rdb"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
+                        <a href="projects/tidal-stripping/" class="w3-hover-opacity">
+                            <img src="projects/tidal-stripping/pf-tidal-stripping.jpg" alt="Tidal stripping" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>Tidal Stripping</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
+                         <a href="projects/sugarcane/" class="w3-hover-opacity">
+                            <img src="projects/sugarcane/pf-sugarcane.jpg" alt="Sugarcane polygones" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>Sugarcane Polygons</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="projects/sa-engine/" class="w3-hover-opacity">
-                        <img src="projects/sa-engine/pf-sa-engine.jpg" alt="Norway" style="width:100%">
-                        <div class="w3-container w3-white">
-                            <p><b>Sentiment Analysis Engine</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                                ultricies
-                                congue gravida diam non fringilla.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="w3-third w3-container">
-                    <a href="projects/aws/" class="w3-hover-opacity">
-                        <img src="projects/aws/pf-aws.jpg" alt="AWS Deployment" style="width:100%">
-                        <div class="w3-container w3-white">
-                            <p><b>AWS Deployment</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                                ultricies
-                                congue gravida diam non fringilla.</p>
-                        </div>
-                    </a>
+
+                <!-- Second Portfolio Item Grid-->
+                <div class="w3-row-padding">
+                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
+                        <a href="projects/dbnormal/" class="w3-hover-opacity">
+                            <img src="projects/dbnormal/pf-dbnormal.jpg" alt="Database normalisation" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>Database Normalisation</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                                    ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
+                        <a href="projects/sa-engine/" class="w3-hover-opacity">
+                            <img src="projects/sa-engine/pf-sa-engine.jpg" alt="Norway" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>Sentiment Analysis Engine</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                                    ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
+                        <a href="projects/aws/" class="w3-hover-opacity">
+                            <img src="projects/aws/pf-aws.jpg" alt="AWS Deployment" style="width:100%">
+                            <div class="w3-container w3-white">
+                                <p><b>AWS Deployment</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                                    ultricies
+                                    congue gravida diam non fringilla.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
