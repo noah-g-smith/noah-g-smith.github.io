@@ -1,24 +1,39 @@
 <head>
-  {% if page.title %}
-    <title>{{ page.title }} | Data Science Portfolio</title>
-  {% else %}
-    <title>Data Science Portfolio</title>
-  {% endif %}
-  {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-  {% else %}
-    <meta name="description" content="Noah Smith Data Science.">
-  {% endif %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
-  <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="/css/main.css">
+    {% if page.title %}
+        <title>{{ page.title }} | Data Science Portfolio</title>
+    {% else %}
+        <title>Data Science Portfolio</title>
+    {% endif %}
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% else %}
+        <meta name="description" content="Noah Smith Data Science Portfolio.">
+    {% endif %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
 
-  <script src="/js/gallery.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      activateGallery();
-    });
-  </script>
+<!--    <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- OJQUERY 3.6.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+            integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- SITE STYLING -->
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- OWL CAROUSEL V2 -->
+
+    <script src="/js/gallery.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          activateGallery();
+        });
+    </script>
 </head>

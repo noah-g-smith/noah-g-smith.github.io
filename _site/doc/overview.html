@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Implementation | Overview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height:1.5;
+            margin:20px;"
+        }
+        ul, p {
+            margin: auto;
+        }
+        p {
+            margin-top: 20px;
+        }
+        li {
+            margin-top: 5px;
+        }
+        hr {
+            margin-top: 30px;
+        }
+        .codeinline
+        {
+            display: inline-block;
+            padding: 0px 6px 0px 6px;
+            background: #1c1c1c;
+            color: #ffffff;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            box-shadow: 0px 0.5px 1px #888888;
+        }
+        .codeblock
+        {
+            min-width: 300px;
+            font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+            margin: 15px 0px 15px 40px;
+            padding: 10px 15px 10px 15px;
+            display: inline-block;
+            position: relative;
+            background: #1c1c1c;
+            color: #ffffff;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            box-shadow: 0px 0.5px 1px #888888;
+        }
+
+        .codeblock p {
+            display: table;
+            width:100%;
+            margin:0px;
+        }
+
+        .codeblock p .code {
+            display: table-cell;
+        }
+        .codeblock p .comment {
+            display: table-cell;
+            padding-left:50px;
+            text-align:right;
+            font-size:14px;
+        }
+        .codeblock p .comment:before {
+            content: "#";
+        }
+        .settings {
+            margin-left: 40px;
+        }
+        .settings th {
+            font-weight: bold;
+            vertical-align: top;
+        }
+        .settings td {
+            padding-left: 20px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="max-width:900px;">
+        <H1>Site Implementation : In Brief</H1>
+
+        <p>This site is hosted on GitHub Pages.</p>
+
+        <hr/>
+
+        <H2>About GitHub Pages</H2>
+
+        <p>GitHub Pages (GHP) is a static site hosting service:</p>
+        <ul>
+            <li><b>Static : </b>Pages served as is. No server-side processing. Think the content of '/STATIC' in of
+                typical dynamic sites.</li>
+            <li><b>Jekyll : </b>GitHub recommended static site generator. Built-in GitHub support. Uses Markdown,
+                and Liquid (template engine).  </li>
+        </ul>
+
+        <p>See also:</p>
+        <ul>
+            <li><b>Static Site Generator (SSG) : </b>Automates task of producing the 'served' files from
+            structured content and templates (abstraction and efficiency). Since a statics site is
+            ... static, generation occurs before serving (unlike a CMS).</li>
+            <li><b>Jamstack : </b>Javascript, API, Markup (SSG Generated). A framework/approach to front-end web
+                development</li>
+            <li><b>Markdown : </b>a lightweight markup language for creating formatted text. So, plain text
+                in, HTML out.</li>
+        </ul>
+
+        <hr/>
+
+        <h2>Dev Platform preliminaries</h2>
+        <p>GitHub is built on Ruby. RubyGems is a package manage for Ruby programs and libraries in a format named
+            'gem'. Packages are referred to as 'Ruby gems' or just '<b>gems</b>'. Jekyll,the SSG we are goint to be
+            using is a gem. Many Jeckyll plug-ins are gems.
+        </p>
+        <p>To dev the GitHub pages site lcoally, we need little concern ourselves about Ruby beyond getting it installed and
+            running and being able to install the Jeckyll gem and a few Jekylems. To manage application gem
+            dependencies we are going to use <b>Bundler</b>.
+        </p>
+        <p>To set up Ruby platform:</p>
+        <ul>
+            <li><b><a href="https://www.ruby-lang.org/en/">Install Ruby</a></b> : Ruby on Unix (and Mac) is straightforward
+                and performance is good. On Windows, Ruby set up is a little messy and performance is poorer. Nevertheless,
+                if you follow the instructions provided carefully you shouldn't have a problem. You also have the option
+                of using the Windows Subsystem for Linux and using a Linux distribution.</li>
+            <li><b>Install Bundler</b> : Installing Bundler is as using the RubyGems command
+                line tool <b>gem</b> as follows : <span class="codeinline">gem install bundler</span>.</li>
+            <li><b>Install Jekyll</b> : </li>As above, use gem: <span class="codeinline">gem install jekyll</span>.</li>
+        </ul>
+
+        <hr/>
+
+        <H2>Jekyll Configuration for Site</H2>
+
+        <p>Site configurations for Jekyll are managed by a file named _config.yml located in the site root directory. </p>
+
+        <H3>_config.yml</H3>
+        <p>Place in site root. See <a href="https://github.com/daattali/beautiful-jekyll/blob/master/_config.yml">Beautiful
+            Jekyll</a> for boilerplate.</p>
+
+        <p>Key Settings</p>
+        <table class="settings">
+            <tbody>
+                <tr>
+                    <th>timezone</th>
+                    <td>timezone: "Australia/Melbourne"</td>
+                    <td><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>">list of timezones</a></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <hr/>
+
+        <H3>Gemfile</H3>
+
+        <p>Gemfile (no extenion) is used to manage gem deployment across different environments.
+            See <a href="https://jekyllrb.com/docs/step-by-step/10-deployment/">Gemfile</a>.
+            Do not edit manually. Bundle manages Gemfile:</p>
+        <div class="codeblock">
+            <p><span class="code">bundle init</span><span class="comment">Create Gemfile</span></p>
+            <p><span class="code">bundle add [gem]</span><span class="comment">Install gem</span></p>
+            <p><span class="code">bundle update</span><span class="comment">Update gems</span></p>
+        </div>
+
+        <hr/>
+
+        <h2>Jekyll Bascis</h2>
+
+        <p>Jekyll uses the <b>Liquid</b> templating language, that, unsurprisingly, shares a lot of
+            terminology, syntax, and approach with other templating engines.</p>
+
+        <H3>Front Matter</H3>
+        <p>The presence of a YAML front matter block means Jekyll will process the page as a
+            template - using the <b>Liquid</b> templating language. The front matter must be valid
+            YAML set between triple-dashed lines. At its most basic, this is simply an empty set of
+            triple-dashed lines:<p>
+        <div class="codeblock" style="">
+            <p><span class="code">---</span></p>
+            <p><span class="code">---</span></p>
+            <p><span class="code"><i>&lt;body&gt;</i></span></p>
+            <p><span class="code"><i>&lt;p&gt;html markup&lt;&sol;p&gt;</i></span></p>
+        </div>
+        <p><b>Variables</b><p>
+        <p>Between these triple-dashed lines in the <b>Front Matter</b> you can set variable (pre-defined
+            and cusom) values, which can the be accessed in Liquid tags both in the file and in any
+            layouts or include files that the page uses.
+        <p>For example:</p>
+        <div class="codeblock" style="">
+            <p><span class="code">---</span></p>
+            <p><span class="code">layout: default</span></p>
+            <p><span class="code">variable: value</span></p>
+            <p><span class="code">---</span></p>
+            <p><span class="code">&lt;p&gt;Value of variable is {{ page.variable }}&lt;&sol;p&gt;</i></span></p>
+        </div>
+
+        <hr/>
+    </div>
+</body>
+</html>
