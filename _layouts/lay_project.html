@@ -18,6 +18,8 @@ layout: carcass
     <link rel="stylesheet" href="/css/w3/font-awesome.min.css">
     <link rel="stylesheet" href="/css/w3-override.css">
 
+    <link rel="stylesheet" href="/css/pills.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -95,9 +97,15 @@ layout: carcass
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
          title="close side menu" id="myOverlay"></div>-->
 
-    {% if page.strip-image %}
-        <img src="{{page.strip-image}}" style="position:absolute; top:0; left:0; z-index:-1; opacity:0.4; height:400px; width:100%">
+    {% assign item = site.project-items[page.project-index] %}
+    {% assign project-id = item[0] %}
+    {% assign project-strip = item[5] %}
+
+    {% if project-strip %}
+        <img src="/projects/{{project-id}}/{{project-strip}}" style="position:absolute; top:0; left:0; z-index:-1; opacity:0.4; height:400px; width:100%">
     {% endif %}
+
+
 
     <div class="w3-small w3-text-grey w3-padding" style="position:absolute; top:0; right:0;" >&copy; 2021 Noah G. Smith</div>
 
@@ -105,7 +113,6 @@ layout: carcass
 
         <div style="display:table; height:100%; width:100%;">
             <div style="display:table-row;">
-
                 <div style="width:100%; display:inline-block; position:relative;">
                     <div style="float:left; height:65px;">
                         <a href="#">
@@ -129,11 +136,22 @@ layout: carcass
                     </div>
                 </div>
             </div>
-            <div style="display:table-row;">
-                <h1 class="w3-left"><b>{{page.project-title}}</b></h1>
+
+            <div style="display:table-row; position:relative;">
+                <div style="float:left;">
+                    <h1 class="w3-left"><b>{{item[1]}}</b></h1>
+                </div>
+                <div style="position:absolute; bottom:2px; right:0;">
+
+                    <div class="pills">
+                        {% for pill in item[3] %}<span class="text-pill {{pill}}"></span><span class="text-pill-spacer"></span>{% endfor %}
+                    </div>
+                </div>
             </div>
-            <div style="display:table-row; height: 100%; border: 5px solid blue;">
-                <iframe style="display:table; height:100%; width:100%;" height="100%" width="100%" src="{{page.project-id}}.html" frameborder="none" >
+
+
+            <div style="display:table-row; height: 100%;">
+                <iframe style="display:table; height:100%; width:100%;" height="100%" width="100%" src="{{project-id}}.html" frameborder="none" >
                 </iframe>
             </div>
         </div>

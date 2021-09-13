@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/css/w3/font-awesome.min.css">
     <link rel="stylesheet" href="/css/w3-override.css">
 
+    <link rel="stylesheet" href="/css/pills.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -94,6 +96,14 @@
          title="close side menu" id="myOverlay"></div>-->
 
     
+    
+    
+
+    
+        <img src="/projects/aws/" style="position:absolute; top:0; left:0; z-index:-1; opacity:0.4; height:400px; width:100%">
+    
+
+
 
     <div class="w3-small w3-text-grey w3-padding" style="position:absolute; top:0; right:0;" >&copy; 2021 Noah G. Smith</div>
 
@@ -101,7 +111,6 @@
 
         <div style="display:table; height:100%; width:100%;">
             <div style="display:table-row;">
-
                 <div style="width:100%; display:inline-block; position:relative;">
                     <div style="float:left; height:65px;">
                         <a href="#">
@@ -125,10 +134,21 @@
                     </div>
                 </div>
             </div>
-            <div style="display:table-row;">
-                <h1 class="w3-left"><b>AWS Deployment (Sentiment Analysis)</b></h1>
+
+            <div style="display:table-row; position:relative;">
+                <div style="float:left;">
+                    <h1 class="w3-left"><b>AWS Deployment</b></h1>
+                </div>
+                <div style="position:absolute; bottom:2px; right:0;">
+
+                    <div class="pills">
+                        <span class="text-pill nlp"></span><span class="text-pill-spacer"></span><span class="text-pill dl"></span><span class="text-pill-spacer"></span><span class="text-pill python"></span><span class="text-pill-spacer"></span><span class="text-pill r"></span><span class="text-pill-spacer"></span><span class="text-pill fortran"></span><span class="text-pill-spacer"></span><span class="text-pill ml"></span><span class="text-pill-spacer"></span><span class="text-pill bayesian"></span><span class="text-pill-spacer"></span><span class="text-pill physics"></span><span class="text-pill-spacer"></span><span class="text-pill rdb"></span><span class="text-pill-spacer"></span>
+                    </div>
+                </div>
             </div>
-            <div style="display:table-row; height: 100%; border: 5px solid blue;">
+
+
+            <div style="display:table-row; height: 100%;">
                 <iframe style="display:table; height:100%; width:100%;" height="100%" width="100%" src="aws.html" frameborder="none" >
                 </iframe>
             </div>
