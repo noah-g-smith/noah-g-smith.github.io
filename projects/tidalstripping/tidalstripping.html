@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>tidal_stripping</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="tidalstripping.css">
+
+    <!--
+        Custom stylesheet: Must be located be in the same directory as the html file
+        <link rel="stylesheet" href="custom.css">
+     -->
+
+    <!-- Loading mathjax macro -->
+    <!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            // Center justify equations in code and markdown cells. Elsewhere
+            // we use CSS to left justify single line equations in code cells.
+            displayAlign: 'center',
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}},
+                linebreaks: { automatic: true }
+            }
+        });
+    </script>
+    <!-- End of mathjax configuration -->
+</head>
+
+<body>
+
+<div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h1 id="Tidal-Stripping">Tidal Stripping<a class="anchor-link" href="#Tidal-Stripping">&#182;</a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>Tidal stripping is an astrophysical phenomenon which occurs when galaxies come within
+                        gravitationally significant distances. The galaxy of larger mass will significantly influence
+                        the stars of the other galaxy, sometimes removing or capturing them.</p>
+                    <p>With a few simplifying assumptions and knowledge of the solution to the two-body problem, tidal
+                        stripping can be simulated accurately enough to explore the phenomenon. Firstly, we assume
+                        Newtonian mechanics, which means bodies in the presence of two gravitational fields will travel
+                        in ellipses, which we can numerically solve for quite easily. Next let us consider the
+                        gravitational field of the galaxies to dominate those of the individual stars. Thus our stars
+                        become test particles only under the influence of two gravitational fields.</p>
+                    <p>Running our program with default settings we have,</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h2 id="Tidal-Stripping-2">Tidal Stripping<a class="anchor-link" href="#Tidal-Stripping">&#182;</a></h2>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[2]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span
+                                class="nn">IPython.display</span> <span class="kn">import</span> <span
+                                class="n">HTML</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;video title=&quot;tidal stripping movie&quot; controls&gt;</span>
+<span class="s2">        &lt;source src=&quot;videos/movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
+<span class="s2">    &lt;/video&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+                    <div class="output_area">
+                        <div class="prompt output_prompt">Out[3]:</div>
+                            <div class="output_html rendered_html output_subarea output_execute_result">
+                                <video autoplay muted loop controls>
+                                    <source src="/projects/tidalstripping/movie.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>Here the blue galaxy has 1 mass unit and the red galaxy, 0.2 mass units. At first the two
+                        galaxies seem to orbit each other peacefully until at about 4 seconds the stars of the second
+                        (red) galaxy go haywire, flying off in varying directions. By five seconds one can make out two
+                        arms extending outward from galaxy two.</p>
+
+                </div>
+            </div>
+        </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;img alt=&quot;arms&quot; source src=&quot;images/snapshot_0.jpg&quot;&gt;</span>
+<span class="s2">    &lt;/img&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[4]:</div>
+
+
+                        <div class="output_html rendered_html output_subarea output_execute_result">
+
+                            <img alt="arms" source src="snapshot_0.jpg"></img>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>Quickly afterwards many of red's stars are engulfed and captured by galaxy one (blue). Also
+                        notice how at three seconds, before red loses any of its stars, that red's stars are orbiting
+                        with much higher eccentricity, so that the whole galaxy has become more elliptical, that is,
+                        squashed in one axis.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[5]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span
+                                class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;img alt=&quot;squashed&quot; src="snapshot_1.jpg"&gt;</span>
+<span class="s2">    &lt;/img&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[5]:</div>
+
+
+                        <div class="output_html rendered_html output_subarea output_execute_result">
+
+                            <img alt="squashed" source src="snapshot_1.jpg">
+                            </img>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h2 id="Tidal-Tails">Tidal Tails<a class="anchor-link" href="#Tidal-Tails">&#182;</a></h2>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>Similar to the formation of 'arms' alluded to previously, galaxies that undergo tidal forces from
+                        neighbouring galaxies may form tidal tails. These tails may be present long after the galaxies
+                        passed by each other or merged.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[6]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span
+                                class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;img alt=&quot;tail&quot; source src=&quot;tidaltails3a.jpg"&gt;</span>
+<span class="s2">    &lt;/img&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[6]:</div>
+
+
+                        <div class="output_html rendered_html output_subarea output_execute_result">
+
+                            <img alt="tail" source src="tidaltails3a.jpg">
+                            </img>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>Let's see if we can produce a tidal tail artifact with out simulation. We can vary both the mass
+                        and speed (in the direction of the y-axis) of galaxy two. Considering the many symmetries of our
+                        setup, this allows us to model most encounters. Specifying a mass of 1 (same as galaxy one mass)
+                        and the stable orbit velocity (default),</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[7]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span
+                                class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;video title=&quot;tidal stripping movie&quot; controls&gt;</span>
+<span class="s2">        &lt;source src=&quot;movie_2.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
+<span class="s2">    &lt;/video&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[7]:</div>
+
+
+                        <div class="output_html rendered_html output_subarea output_execute_result">
+
+                            <video title="tidal stripping movie" controls>
+                                <source src="movie_2.mp4" type="video/mp4">
+                            </video>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>As the galaxies pass each other, at three seconds, both form well defined tidal tails. The tails
+                        do not last long, as the galaxies while orbiting each other, continue to apply strong tidal
+                        forces.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[8]:</div>
+                <div class="inner_cell">
+                    <div class="input_area">
+                        <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span
+                                class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;img alt=&quot;tail&quot; src="snapshot_2.jpg"&gt;</span>
+<span class="s2">    &lt;/img&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output_wrapper">
+                <div class="output">
+
+
+                    <div class="output_area">
+
+                        <div class="prompt output_prompt">Out[8]:</div>
+
+
+                        <div class="output_html rendered_html output_subarea output_execute_result">
+
+                            <img alt="tail" source src="snapshot_2.jpg">
+                            </img>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <h2 id="Discussion">Discussion<a class="anchor-link" href="#Discussion">&#182;</a></h2>
+                </div>
+            </div>
+        </div>
+        <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+                <div class="text_cell_render border-box-sizing rendered_html">
+                    <p>How accurate is this picture of galaxy gravitational interaction? This depends on where the
+                        assumptions are valid. While the stars from each galaxy remain captured the centre of mass will
+                        not change much from the two-body elliptical orbit it has been placed on in. When foreign test
+                        particles (stars of another galaxy) are experiencing significant gravitational forces they will
+                        move according to the centre of mass so long as they do not actually enter the galaxy itself.
+                        Many of the captured stars may move differently if they come in close contact with other stars
+                        but they will still for the most part orbit the new galaxies centre of mass.</p>
+                    <p>To further extend this project the velocity of the second galaxy could be variable, not just its
+                        speed along the it's tangent at apastron (the vertical axis), where it starts.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+ 
+
+
+</html>

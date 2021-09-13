@@ -17,7 +17,7 @@ project-items:
             "A quick pass at the legendary Titanic ML competition from Kaggle.",
             "strip_titanic_sinking.jpg"],
 
-        ["tidal-stripping", "Tidal Stripping", "pf-tidal-stripping.jpg",
+        ["tidalstripping", "Tidal Stripping", "pf_tidalstripping.jpg",
             ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
             "Tidal Stripping brief description.",
             "strip_carina_nebula.jpg"],

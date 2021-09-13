@@ -10,7 +10,7 @@
 <loc>/projects/sugarcane/</loc>
 </url>
 <url>
-<loc>/projects/tidal-stripping/</loc>
+<loc>/projects/tidalstripping/</loc>
 </url>
 <url>
 <loc>/projects/titanic/</loc>
@@ -42,8 +42,12 @@
 <lastmod>2021-09-13T07:39:51+00:00</lastmod>
 </url>
 <url>
-<loc>/projects/tidal-stripping/tidal-stripping.html</loc>
-<lastmod>2021-09-13T09:34:30+00:00</lastmod>
+<loc>/projects/tidalstripping/test.html</loc>
+<lastmod>2021-09-13T14:02:35+00:00</lastmod>
+</url>
+<url>
+<loc>/projects/tidalstripping/tidalstripping.html</loc>
+<lastmod>2021-09-13T14:04:22+00:00</lastmod>
 </url>
 <url>
 <loc>/projects/titanic/titanic.html</loc>
