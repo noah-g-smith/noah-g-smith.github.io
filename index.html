@@ -282,7 +282,7 @@ layout: carcass
 
 
     <!-- PAGE CONTENT -->
-    <div class="w3-main" style="margin-left:250px; padding-left:30px; padding-right: 30px;">
+    <div id="home" class="w3-main" style="margin-left:250px; padding-left:30px; padding-right: 30px;">
         <header>
             <div class="w3-hide-large" style="width:100%; padding-top:10px; display:inline-block; position:relative;">
                 <div style="float:left; height:65px;">
@@ -292,15 +292,15 @@ layout: carcass
                 </div>
                 <div style="font-size: 16px; float:right; position:absolute; bottom:0; right:0;">
                     <div>
-                        <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">
+                        <a href="#home" class="w3-bar-item w3-button">
                             <i class="las la-home" style="padding-right:10px;"></i>HOME
                         </a>
 
-                        <a href="/#projects" onclick="w3_close()" class="w3-bar-item w3-button">
+                        <a href="#projects" class="w3-bar-item w3-button">
                             <i class="las la-border-all" style="padding-right:10px;"></i>PROJECTS
                         </a>
 
-                        <a href="/#sourcecode" onclick="w3_close()" class="w3-bar-item w3-button">
+                        <a href="#sourcecode" class="w3-bar-item w3-button">
                              <i class="las la-code" style="padding-right:10px;"></i>CODE
                         </a>
                     </div>
@@ -309,7 +309,7 @@ layout: carcass
         </header>
 
         <!-- HOME SECTION -->
-        <section id="home">
+        <section id="story">
             <div class="w3-container" style="padding-left:10px; padding-right: 10px; padding-top:0; margin-top:0px;">
                        <h1 class="w3-text-orange"><b>Noah's Story</b></h1>
                 <div style="display:inline-block; padding-bottom:30px;">
