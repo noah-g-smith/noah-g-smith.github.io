@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/w3-override.css">
 
     <link rel="stylesheet" href="/css/pills.css">
-
+    <link rel="stylesheet" href="/css/extras.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
           integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
@@ -423,19 +423,15 @@
                 &copy; 2021 Noah G. Smith
             </div>
         </footer>
-        <!-- END PAGE CONTENT -->
+            <!-- END PAGE CONTENT -->
+
+        <button onclick="scrollToTop()" class="scroll-to-top"><i class="las la-arrow-up"></i></button>
+
     </div>
 
     <script>
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("oidSidebarMenu").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("oidSidebarMenu").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
+        function scrollToTop() {
+          window.scroll({top: 0, left: 0, behavior: 'smooth'});
         }
     </script>
 </body>
