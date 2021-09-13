@@ -1,7 +1,9 @@
 ---
 layout: carcass
 ---
+
 {% comment %}
+
     <!--
         Liquid Comments:
                 Content between Liquid tags {% comment %}{% endcomment %} is not rendered in output (html). Use for all
@@ -14,6 +16,39 @@ layout: carcass
                     * This source SHOULD NOT BE MODIFIED.
                     * Overrides are to placed in [root]/css/w3-overrides.css.
     -->
+
+
+    <!--
+
+    folio-items:
+        temp copy of portfolio items (from _config.yml)
+        [
+            ["titanic", "Titanic Survival", "pf-titanic.jpg",
+                ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+                "A quick pass at the legendary Titanic ML competition from Kaggle."],
+
+            ["tidal-stripping", "Tidal Stripping", "pf-tidal-stripping.jpg",
+                ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+                "Tidal Stripping brief description."],
+
+            ["sugarcane", "Sugarcane Polygons", "pf-sugarcane.jpg",
+                ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+                "Sugarcane Polygons brief description."],
+
+            ["dbnormal", "Database Normalisation", "pf-dbnormal.jpg",
+                ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+                "Database Normalisation brief description."],
+
+            ["sa-engine", "Sentiment Analysis", "pf-sa-engine.jpg",
+                ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+                "Sentiment Analysis brief description."],
+
+            ["aws", "AWS Deployment", "pf-aws.jpg",
+                ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+                "AWS Deployment brief description."],
+        ]
+    -->
+
 {% endcomment %}
 
 <html>
@@ -57,22 +92,10 @@ layout: carcass
         .w3-hover-opacity {
             text-decoration:none;
         }
-<!--
-        .w3-row-padding>.w3-third {
-            padding: 0 8px;
-        }
-
-
-        @media (min-width:601px) {
-            .w3-third {
-                float:none;
-            }
-        }
--->
 
         /* END: [W3.CSS Class Overrides]   */
 
-        /* New Classes */
+        /* START: NEW CLASSES */
         section {
             padding-top:30px;
         }
@@ -84,21 +107,98 @@ layout: carcass
             color:#ff9800;
         }
 
+        .__fbox .cell {
+            width:100%;
+            float: left;
+            padding-bottom:20px;
+       }
+
+        .__fbox .cell .overlay {
+            z-index:1;
+            position:relative;
+            background-color: red;
+        }
+        .__fbox .cell .overlay .block-image {
+            width:100%;
+        }
+        .__fbox .cell .overlay .block-text {
+            width:100%;
+            background-color: white;
+            color: black;
+        }
+
+        .__fbox .cell .overlay .block-text .title {
+            margin: 10px 0px 0px 0px;
+            color: black;
+
+         }
+        .__fbox .cell .overlay .block-text .brief {
+            font-size: 80%;
+            margin: 6px 0px 0px 0px;
+            color: black;
+            height:100%;
+        }
+        .__fbox .cell .overlay .block-text .pills {
+            opacity: 1;
+            margin: 10px 0px 10px 0px;
+            line-height:14px;
+            font-weight:bold;
+            color:black;
+        }
+
+        @media (min-width:601px) {
+            .__fbox {
+                display:table;
+                width:100%;
+                border-collapse: collapse;
+                border: none;
+            }
+
+            .__fbox .row {
+                display:table-row;
+                width:100%;
+            }
+
+            .__fbox .cell {
+                display: table-cell;
+                float: none;
+                width: 33.33333%;
+                position: relative;
+                background-color: transparent;
+                padding:10px;
+                border: none;
+
+            }
+
+            .__fbox .cell .underlay {
+                z-index:0;
+                position:absolute;
+                top:10px;
+                bottom:10px;
+                left:10px;
+                right:10px;
+                background-color: white;
+            }
+
+
+        }
 
         .text-pill {
             border: none;
             color: white;
-            padding: 0px 3px;
+            margin: 0px 2px 0px 0px;
+            padding: 0px 4px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
-            margin: 0px 0px;
+            line-height: 1;
             border-radius: 10px;
-            text-decoration: none;
             font-size:10px;
-
-
+            white-space: nowrap;
         }
+
+        .text-pill-spacer {font-size: 3px;}
+        .text-pill-spacer::before {content: " ";}
+
         .text-pill.python {background-color: #9E372C;}
         .text-pill.python::before {content: "PYTHON";}
 
@@ -183,17 +283,7 @@ layout: carcass
 
     <!-- PAGE CONTENT -->
     <div class="w3-main" style="margin-left:250px; padding-left:30px; padding-right: 30px;">
-        <!-- HEADER -->
-<!--        <header>
-            <a href="#">
-                <img src="/images/logo.png" style="width:45px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
-            </a>
-            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()">
-                <i class="fa fa-bars"></i></span>
-        </header>-->
-
         <header>
-<!--            <div class="w3-hide-large w3-small w3-text-grey w3-padding" style="position:absolute; top:0; right:0;" >&copy; 2021 Noah G. Smith</div>-->
             <div class="w3-hide-large" style="width:100%; padding-top:10px; display:inline-block; position:relative;">
                 <div style="float:left; height:65px;">
                     <a href="#">
@@ -220,8 +310,8 @@ layout: carcass
 
         <!-- HOME SECTION -->
         <section id="home">
-            <div class="w3-container" style="padding-bottom:10px;">
-                <h1 class="w3-text-orange"><b>Noah's Story</b></h1>
+            <div class="w3-container" style="padding-left:10px; padding-right: 10px; padding-top:0; margin-top:0px;">
+                       <h1 class="w3-text-orange"><b>Noah's Story</b></h1>
                 <div style="display:inline-block; padding-bottom:30px;">
                     <div style="float:left; min-width:400px; max-width:700px; margin-right:100px;">
                         <div>
@@ -262,151 +352,48 @@ layout: carcass
 
         <!-- PORTFOLIO SECTION -->
         <section id="portfolio">
-             <div class="w3-container">
+             <div class="w3-container" style="padding-left: 10px;">
                 <h1 class="w3-text-orange"><b>Portfolio</b></h1>
             </div>
-<!--
-            <div class="w3-table" >
-                <div class="w3-row-padding" style="display:table-row;">
-                    <div class="w3-cell w3-third float-none " style="display:table-cell;" >
-                        <a href="projects/titanic/" class="w3-hover-opacity">
-                            <img src="projects/titanic/pf_titanic.jpg" alt="Titanic survival" style="width:100%" >
-                            <div class="w3-container w3-white">
-                                <p><b>Titanic Survival</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                    congue gravida diam non fringilla.</p>
-                                <p>
-                                    <span class="text-pill nlp"></span>
-                                    <span class="text-pill dl"></span>
-                                    <span class="text-pill python"></span>
-                                    <span class="text-pill r"></span>
-                                    <span class="text-pill fortran"></span>
-                                    <span class="text-pill ml"></span>
-                                    <span class="text-pill bayesian"></span>
-                                    <span class="text-pill physics"></span>
-                                    <span class="text-pill rdb"></span>
-                                </p>
-                            </div>
-                        </a>
+            {% assign colnumber = 0 %}
+            {% for item in site.portfolio-items %}
+                {% if colnumber == 3 %}
                     </div>
-                    <div class="w3-cell w3-third float-none" style="display:table-cell" >
-                        <a href="projects/tidal-stripping/" class="w3-hover-opacity">
-                            <img src="projects/tidal-stripping/pf-tidal-stripping.jpg" alt="Tidal stripping" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>Tidal Stripping</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                    congue gravida diam non fringilla.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w3-cell w3-third float-none" style="display:table-cell;" >
-                        <a href="projects/sugarcane/" class="w3-hover-opacity">
-                            <img src="projects/sugarcane/pf-sugarcane.jpg" alt="Sugarcane polygones" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>Sugarcane Polygons</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                    congue gravida diam non fringilla.</p>
+                    {% assign colnumber = 0 %}
+                {% endif %}
+                {% assign colnumber = colnumber | plus: 1 %}
+                {% if forloop.index == 1 %}
+                    <!-- START TABLE -->
+                    <div class="__fbox">
+                {% endif %}
+                {% if colnumber == 1 %}
+                    <div class="row">
+                {% endif %}
+                <div class="cell">
+                    <div class="underlay"></div>
+                    <div class="overlay">
+                        <a href="projects/{{item[0]}}" class="w3-hover-opacity" >
+                            <img class="block-image" src="projects/{{item[0]}}/{{item[2]}}" alt="{{item[1]}}"  >
+                            <div class="block-text w3-container">
+                                <p class="title"><b>{{item[1]}}</b></p>
+                                <p class="brief">{{item[4]}}</p>
+                                <div class="pills">
+                                    {% for pill in item[3] %}<span class="text-pill {{pill}}"></span><span class="text-pill-spacer"></span>{% endfor %}
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
-
-            </div>
-            <p></p>-->
-
-            <div class="w3-table" >
-
-                <div class="w3-row-padding">
-
-                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
-                        <a href="projects/titanic/" class="w3-hover-opacity">
-                            <img src="projects/titanic/pf_titanic.jpg" alt="Titanic survival" style="width:100%" >
-                            <div class="w3-container w3-white">
-                                <p><b>Titanic Survival</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                    congue gravida diam non fringilla.</p>
-                                <p>
-                                    <span class="text-pill nlp"></span>
-                                    <span class="text-pill dl"></span>
-                                    <span class="text-pill python"></span>
-                                    <span class="text-pill r"></span>
-                                    <span class="text-pill fortran"></span>
-                                    <span class="text-pill ml"></span>
-                                    <span class="text-pill bayesian"></span>
-                                    <span class="text-pill physics"></span>
-                                    <span class="text-pill rdb"></span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
-                        <a href="projects/tidal-stripping/" class="w3-hover-opacity">
-                            <img src="projects/tidal-stripping/pf-tidal-stripping.jpg" alt="Tidal stripping" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>Tidal Stripping</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                    congue gravida diam non fringilla.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
-                         <a href="projects/sugarcane/" class="w3-hover-opacity">
-                            <img src="projects/sugarcane/pf-sugarcane.jpg" alt="Sugarcane polygones" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>Sugarcane Polygons</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-                                    congue gravida diam non fringilla.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Second Portfolio Item Grid-->
-                <div class="w3-row-padding">
-                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
-                        <a href="projects/dbnormal/" class="w3-hover-opacity">
-                            <img src="projects/dbnormal/pf-dbnormal.jpg" alt="Database normalisation" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>Database Normalisation</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                                    ultricies
-                                    congue gravida diam non fringilla.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
-                        <a href="projects/sa-engine/" class="w3-hover-opacity">
-                            <img src="projects/sa-engine/pf-sa-engine.jpg" alt="Norway" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>Sentiment Analysis Engine</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                                    ultricies
-                                    congue gravida diam non fringilla.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w3-cell w3-third w3-container w3-margin-bottom">
-                        <a href="projects/aws/" class="w3-hover-opacity">
-                            <img src="projects/aws/pf-aws.jpg" alt="AWS Deployment" style="width:100%">
-                            <div class="w3-container w3-white">
-                                <p><b>AWS Deployment</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
-                                    ultricies
-                                    congue gravida diam non fringilla.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w3-container" style="padding-top:50px;">
-<!--                <hr>-->
-            </div>
+                {% if forloop.index == site.portfolio-items.size %}
+                    </div></div>
+                    <!-- END TABLE -->
+                {% endif %}
+            {% endfor %}
         </section>
 
         <!-- SOURCE CODE SECTION -->
         <section id="sourcecode">
-            <div class="w3-container">
+            <div class="w3-container" style="padding-left:10px; padding-right: 10px; padding-top:0; margin-top:0px;">
                 <h1 class="w3-text-orange"><b>Source Code</b></h1>
                 <div class="w3-light-grey" style="display:inline-block; width:100%; padding:30px 30px 30px 30px; ">
                     <div style="float:left; min-width:400px; max-width:700px; margin-right:100px;">

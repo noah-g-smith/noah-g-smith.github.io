@@ -236,10 +236,13 @@ hr {
 @media (min-width:601px) {
     .w3-col.m1{width:8.33333%}
     .w3-col.m2{width:16.66666%}
-    .w3-col.m3,.w3-quarter{width:24.99999%}
-    .w3-col.m4,.w3-third{width:33.33333%}
+    .w3-col.m3,
+    .w3-quarter{width:24.99999%}
+    .w3-col.m4,
+    .w3-third{width:33.33333%}
     .w3-col.m5{width:41.66666%}
-    .w3-col.m6,.w3-half{width:49.99999%}
+    .w3-col.m6,
+    .w3-half{width:49.99999%}
     .w3-col.m7{width:58.33333%}
     .w3-col.m8,.w3-twothird{width:66.66666%}
     .w3-col.m9,.w3-threequarter{width:74.99999%}
@@ -337,7 +340,7 @@ hr {
 .w3-round-xlarge{border-radius:16px}
 .w3-round-xxlarge{border-radius:32px}
 
-.w3-row-padding,
+.w3-row-padding>.w3-table
 .w3-row-padding>.w3-half,
 .w3-row-padding>.w3-third,
 .w3-row-padding>.w3-twothird,

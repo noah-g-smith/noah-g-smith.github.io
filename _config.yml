@@ -9,8 +9,35 @@ title: Project Portfolio of Noah Smith
 # Your name to show in the footer
 author: Noah Smith
 
-# --- List of links in the navigation bar --- #
 
+portfolio-items:
+    [
+        ["titanic", "Titanic Survival", "pf-titanic.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "A quick pass at the legendary Titanic ML competition from Kaggle."],
+
+        ["tidal-stripping", "Tidal Stripping", "pf-tidal-stripping.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "Tidal Stripping brief description."],
+
+        ["sugarcane", "Sugarcane Polygons", "pf-sugarcane.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "Sugarcane Polygons brief description."],
+
+        ["dbnormal", "Database Normalisation", "pf-dbnormal.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "Database Normalisation brief description."],
+
+        ["sa-engine", "Sentiment Analysis", "pf-sa-engine.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "Sentiment Analysis brief description."],
+
+        ["aws", "AWS Deployment", "pf-aws.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "AWS Deployment brief description."],
+    ]
+
+# --- List of links in the navigation bar --- #
 navbar-links:
   About Me: "aboutme"
   Resources:
