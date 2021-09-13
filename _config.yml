@@ -31,16 +31,16 @@ project-items:
             ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
             "Database Normalisation brief description.",
             "strip_dbnormal.jpg"],
-
-        ["sa-engine", "Sentiment Analysis", "pf-sa-engine.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
-            "Sentiment Analysis brief description.",
-            ""],
-
-        ["aws", "AWS Deployment", "pf-aws.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
-            "AWS Deployment brief description.",
-            ""],
+#
+#        ["sa-engine", "Sentiment Analysis", "pf-sa-engine.jpg",
+#            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+#            "Sentiment Analysis brief description.",
+#            ""],
+#
+#        ["aws", "AWS Deployment", "pf-aws.jpg",
+#            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+#            "AWS Deployment brief description.",
+#            ""],
     ]
 
 # --- List of links in the navigation bar --- #
