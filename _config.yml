@@ -10,7 +10,7 @@ title: Project Portfolio of Noah Smith
 author: Noah Smith
 
 
-portfolio-items:
+project-items:
     [
         ["titanic", "Titanic Survival", "pf-titanic.jpg",
             ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],

@@ -250,8 +250,8 @@ layout: carcass
                 <i class="las la-home" style="padding-right:10px;"></i>HOME
             </a>
 
-            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-                <i class="las la-border-all" style="padding-right:10px;"></i>PORTFOLIO
+            <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+                <i class="las la-border-all" style="padding-right:10px;"></i>PROJECTS
             </a>
 
             <a href="#sourcecode" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
@@ -296,8 +296,8 @@ layout: carcass
                             <i class="las la-home" style="padding-right:10px;"></i>HOME
                         </a>
 
-                        <a href="/#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">
-                            <i class="las la-border-all" style="padding-right:10px;"></i>PORTFOLIO
+                        <a href="/#projects" onclick="w3_close()" class="w3-bar-item w3-button">
+                            <i class="las la-border-all" style="padding-right:10px;"></i>PROJECTS
                         </a>
 
                         <a href="/#sourcecode" onclick="w3_close()" class="w3-bar-item w3-button">
@@ -350,13 +350,13 @@ layout: carcass
             </div>
         </section>
 
-        <!-- PORTFOLIO SECTION -->
-        <section id="portfolio">
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
              <div class="w3-container" style="padding-left: 10px;">
-                <h1 class="w3-text-orange"><b>Portfolio</b></h1>
+                <h1 class="w3-text-orange"><b>Projects</b></h1>
             </div>
             {% assign colnumber = 0 %}
-            {% for item in site.portfolio-items %}
+            {% for item in site.project-items %}
                 {% if colnumber == 3 %}
                     </div>
                     {% assign colnumber = 0 %}
@@ -384,7 +384,7 @@ layout: carcass
                         </a>
                     </div>
                 </div>
-                {% if forloop.index == site.portfolio-items.size %}
+                {% if forloop.index == site.project-items.size %}
                     </div></div>
                     <!-- END TABLE -->
                 {% endif %}
