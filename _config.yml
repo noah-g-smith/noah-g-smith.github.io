@@ -15,7 +15,7 @@ project-items:
         ["saengine", "Sentiment Analysis", "pf_saengine.jpg",
             ["nlp","dl","python","rdb"],
             "Sentiment analysis from unstructured feedback (comments).",
-            "strip_saengine.jpg"],
+            "strip_saengine.png"],
 
         ["titanic", "Titanic Survival", "pf_titanic.jpg",
             ["python", "ml"],
