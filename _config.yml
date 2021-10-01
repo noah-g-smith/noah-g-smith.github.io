@@ -12,7 +12,12 @@ author: Noah Smith
 
 project-items:
     [
-        ["titanic", "Titanic Survival", "pf-titanic.jpg",
+        ["saengine", "Sentiment Analysis", "pf_saengine.jpg",
+            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            "Sentiment analysis from unstructured feedback (comments).",
+            "strip_saengine.jpg"],
+
+        ["titanic", "Titanic Survival", "pf_titanic.jpg",
             ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
             "A quick pass at the legendary Titanic ML competition from Kaggle.",
             "strip_titanic_sinking.jpg"],
@@ -22,25 +27,15 @@ project-items:
             "Tidal Stripping brief description.",
             "strip_carina_nebula.jpg"],
 
-        ["sugarcane", "Sugarcane Polygons", "pf-sugarcane.jpg",
+        ["sugarcane", "Sugarcane Polygons", "pf_sugarcane.jpg",
             ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
             "Sugarcane Polygons brief description.",
             "strip_sugarcane.jpg"],
 
-        ["dbnormal", "Database Normalisation", "pf-dbnormal.jpg",
+        ["dbnormal", "Database Normalisation", "pf_dbnormal.jpg",
             ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
             "Database Normalisation brief description.",
             "strip_dbnormal.jpg"],
-#
-#        ["sa-engine", "Sentiment Analysis", "pf-sa-engine.jpg",
-#            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
-#            "Sentiment Analysis brief description.",
-#            ""],
-#
-#        ["aws", "AWS Deployment", "pf-aws.jpg",
-#            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
-#            "AWS Deployment brief description.",
-#            ""],
     ]
 
 # --- List of links in the navigation bar --- #

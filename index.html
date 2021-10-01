@@ -289,7 +289,9 @@ layout: carcass
                 <h1 class="w3-text-orange"><b>Projects</b></h1>
             </div>
             {% assign colnumber = 0 %}
+            {% assign prjindex = -1 %}
             {% for item in site.project-items %}
+                {% assign prjindex = prjindex | plus: 1 %}
                 {% if colnumber == 3 %}
                     </div>
                     {% assign colnumber = 0 %}

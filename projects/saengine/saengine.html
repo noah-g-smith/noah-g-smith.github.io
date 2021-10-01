@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html style="height:100%; width:100%;">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <style>
+        html, body,h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif}
+
+        html, body {
+            font-size:18px;
+            }
+    </style>
+</head>
+
+<body style="height:100%;  background-color:#fff; margin: 40px 30px 40px 50px;">
+    <div style="max-width:700px">
+        <h3>Background</h3>
+        <p>In the final year of my Master’s degree, I developed a sentiment analysis engine as part of my academic
+        professional practice. The engine forms the backend of a sentiment analysis web application which was
+        initially developed by students at Deakin University for an external (industry) client.<p>
+
+        <p>The engine (and associated IP) has since been acquired by a startup and will become the core of
+        a commercial service. The code and specific engineering is obviously now proprietary IP and cannot be
+        discussed here. Instead I can provide a very basic overview of the problem space and solution.</p>
+
+        <h3>Problem-Space</h3>
+        <p>Traditional data-based decison-making obviously necessitates tightly controlled data gathering and highly-structured
+        data (think a clinical trial). At the same time, communication technologies have provided for the wholesale collection of
+        vast amounts of largely unstructured feedback (think commentary), solicted and unsolicited.</p>
+
+        <h3>Solution</h3>
+        <p>A web-based sentiment analysis service/platform that first targets the evaluation industry - those that are already
+        in the business of providing/implementing sentiment analysis. At the core of thsi solution is a 'sentiment analysis engine' that
+        takes unstructured feedback data and proprietary domain dicionaries to produce domain-based and overall sentiment analysis scores.</p>
+
+        <p>While my role was to design and code the 'engine', I also had the opportunity to undertake some business analysis - specifically
+        looking at rapid development and implementation of a flexible and scalable solution using a small team of developers, delivering
+        a prototype solution on AWS (Amazon Web Services) that looks to be very effective approach.</p>
+
+        <h3>Basic Architecture</h3>
+
+        <img src="diagram_1.png" width="90%" />
+
+        <h3>Raw Output</h3>
+
+        <p>Engine output is available to clients for integration into their own systems (via manual download or API). The service also
+            provides for extensive online analystics, allowing evaluation teams to draw insight immediately without futher
+            local computation, and also serves as a filtration mechanism; human review being necessary in order to obtain
+            precise/nuanced understanding of written work.</p>
+
+       <p>The service provides extensive custom pre-processsing and post-processing. At its most basic, users will be able to
+           filter comments of particular interest and insight, ignoring data of insignificant value. Below is a very small
+           representative output from university unit feedback with accompanying sentiment scores.
+
+        <table border=1 cellspacing=0 cellpadding="5" style="width:100%; font-size:10px;" >
+            <tr>
+                <th><br/>COMMENT</th>
+                <th><br/>OUTCOMES</th>
+                <th><br/>STAFF</th>
+                <th>UNIT<br/>DESIGN</th>
+                <th><br/>ASSESSMENT</th>
+                <th><br/>SUPPORT</th>
+                <th>OVERALL<br/>SENTIMENT</th>
+            </tr>
+
+            <tr>
+                <td>The entire unit needs to be re-visited. The explanations of every
+                  assignment so unclear that the forums were inundated with unsure students,
+                  having a team presentation on the last teaching week is extremely bad timing,
+                  giving that most of us are already involved in revision for other units and
+                  other work commitments it was very difficult to organise an 'online team' ,
+                  it was another non-enjoyable part of the subject.
+                </td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>-0.01</td>
+                <td>0.12</td>
+                <td>-0.25</td>
+                <td>-0.42</td>
+            </tr>
+
+            <tr>
+                <td>The teaching staff are excellent.  The classes, seminars and prac
+                  labs were also very informative.  The prac labs were particularly helpful for
+                  hands on experience.  Reading resources were also very good, including
+                  Prescribed Text.
+                </td>
+                <td>0.25</td>
+                <td>2.24</td>
+                <td>0.74</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.89</td>
+            </tr>
+            <tr>
+                <td>Very well run unit.  Very engaging with a thoughtful lecturer who was
+                      aware of the learning needs in an online environment.  Online setup promoted
+                      discussion.  Lecturer knew what she was talking about.
+                </td>
+                <td>0.00</td>
+                <td>1.23</td>
+                <td>0.74</td>
+                <td>>0.00</td>
+                <td>0.00</td>
+                <td>0.82</td>
+            </tr>
+            <tr>
+                <td>Make a tutorial time clear in the scheduling and stick with it and be
+                  there for a good period of time. I need cloud study as I am juggling around
+                  work and children.  When you do conduct tutorial, make sure the audio works.
+                    It only worked one night I was on.
+                </td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>-0.26</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>-0.17</td>
+            </tr>
+            <tr>
+                <td>The order of topics was logical and allowed students to build on
+                      their knowledge throughout.  Although many of the topics were delivered by
+                      different lecturers, links to earlier topics were consistently identified and
+                      helped to integrate the underlying biochemistry and physiology.  I
+                      particularly liked the use of papers v text books and thought this reinforced
+                      the learning goals of the two written assessments.
+                </td>
+                <td>0.00</td>
+                <td>0.37</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>1.12</td>
+                <td>0.73</td>
+            </tr>
+        </table>
+        <p>&nbsp;</p>
+    </div>
+</body>
+</html>
