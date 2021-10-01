@@ -13,27 +13,27 @@ author: Noah Smith
 project-items:
     [
         ["saengine", "Sentiment Analysis", "pf_saengine.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            ["nlp","dl","python","rdb"],
             "Sentiment analysis from unstructured feedback (comments).",
             "strip_saengine.jpg"],
 
         ["titanic", "Titanic Survival", "pf_titanic.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            ["python", "ml"],
             "A quick pass at the legendary Titanic ML competition from Kaggle.",
             "strip_titanic_sinking.jpg"],
 
         ["tidalstripping", "Tidal Stripping", "pf_tidalstripping.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            ["fortran","physics"],
             "Tidal Stripping brief description.",
             "strip_carina_nebula.jpg"],
 
         ["sugarcane", "Sugarcane Polygons", "pf_sugarcane.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            ["python","ml"],
             "Sugarcane Polygons brief description.",
             "strip_sugarcane.jpg"],
 
         ["dbnormal", "Database Normalisation", "pf_dbnormal.jpg",
-            ["nlp","dl","python","r","fortran","ml","bayesian","physics","rdb"],
+            ["rdb"],
             "Database Normalisation brief description.",
             "strip_dbnormal.jpg"],
     ]
