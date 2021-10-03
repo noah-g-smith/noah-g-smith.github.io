@@ -17,16 +17,6 @@ project-items:
             "Sentiment analysis from unstructured feedback (comments).",
             "strip_saengine.png"],
 
-        ["titanic", "Titanic Survival", "pf_titanic.jpg",
-            ["python", "ml"],
-            "A quick pass at the legendary Titanic ML competition from Kaggle.",
-            "strip_titanic_sinking.jpg"],
-
-        ["tidalstripping", "Tidal Stripping", "pf_tidalstripping.jpg",
-            ["fortran","physics"],
-            "Tidal Stripping brief description.",
-            "strip_carina_nebula.jpg"],
-
         ["sugarcane", "Sugarcane Polygons", "pf_sugarcane.jpg",
             ["python","ml"],
             "Sugarcane Polygons brief description.",
@@ -36,6 +26,16 @@ project-items:
             ["rdb"],
             "Database Normalisation brief description.",
             "strip_dbnormal.jpg"],
+
+        ["tidalstripping", "Tidal Stripping", "pf_tidalstripping.jpg",
+            ["fortran","physics"],
+            "Tidal Stripping brief description.",
+            "strip_carina_nebula.jpg"],
+
+        ["titanic", "Titanic Survival", "pf_titanic.jpg",
+            ["python", "ml"],
+            "A quick pass at the legendary Titanic ML competition from Kaggle.",
+            "strip_titanic_sinking.jpg"],
     ]
 
 # --- List of links in the navigation bar --- #
