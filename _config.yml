@@ -14,27 +14,28 @@ project-items:
     [
         ["saengine", "Sentiment Analysis", "pf_saengine.jpg",
             ["nlp","dl","python","rdb"],
-            "Sentiment analysis from unstructured feedback (comments).",
+            "A web-based service delivering sentiment analysis from unstructured feedback data.",
             "strip_saengine.png"],
 
         ["sugarcane", "Sugarcane Polygons", "pf_sugarcane.jpg",
             ["python","ml"],
-            "Sugarcane Polygons brief description.",
+            "Satellite image library, including pixel classification, image processing and polygon masks.",
             "strip_sugarcane.jpg"],
 
         ["dbnormal", "Database Normalisation", "pf_dbnormal.jpg",
             ["rdb"],
-            "Database Normalisation brief description.",
+            "The mathematics of database normalisation - first order logic, set theory, relational algebra, relvars.",
             "strip_dbnormal.jpg"],
 
         ["tidalstripping", "Tidal Stripping", "pf_tidalstripping.jpg",
             ["fortran","physics"],
-            "Tidal Stripping brief description.",
+            "Using the solution to the two-body problem to simulate and explore tidal stripping between two galaxies.",
             "strip_carina_nebula.jpg"],
 
         ["titanic", "Titanic Survival", "pf_titanic.jpg",
             ["python", "ml"],
-            "A quick pass at the legendary Titanic ML competition from Kaggle.",
+            "A quick pass at the legendary Titanic ML competition from Kaggle (data analysis, pre-processing, feature
+             engineering, machine learning, parameter tuning).",
             "strip_titanic_sinking.jpg"],
     ]
 

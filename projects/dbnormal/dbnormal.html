@@ -78,7 +78,16 @@
             </div>
             <div class="inner_cell">
                 <div class="text_cell_render border-box-sizing rendered_html">
-                    <p>Database normalisation refers to the restructuring of a relational database in accordance with a series of mathematical constraints referred to as normal forms. When met, these conditions provide protection against update, deletion, and insertion anomalies, thus ensuring data integrity. Theoretically, a completely normalised database could be queried by a language of first-order logic without ever producing inconsistency. The implementation of such concepts can be very difficult and practical necessity often unavoidable. Take for example Structured Query Language (SQL), which is an implementation of a first-order logical language, and although it does function well in practice it is not rigorously first-order logical. Many databases face unique challenges capturing real world information, and yet the striving towards mathematical constraints they may never meet may be the difference between data integrity and inconsistency.</p>
+                    <p>Database normalisation refers to the restructuring of a relational database in accordance with a
+                        series of mathematical constraints referred to as normal forms. When met, these conditions
+                        provide protection against update, deletion, and insertion anomalies, thus ensuring data
+                        integrity. Theoretically, a completely normalised database could be queried by a language of
+                        first-order logic without ever producing inconsistency. The implementation of such concepts can
+                        be very difficult and practical necessity often unavoidable. Take for example Structured Query
+                        Language (SQL), which is an implementation of a first-order logical language, and although it
+                        does function well in practice it is not rigorously first-order logical. Many databases face
+                        unique challenges capturing real world information, and yet the striving towards mathematical
+                        constraints they may never meet may be the difference between data integrity and inconsistency.</p>
 
 </div>
 </div>
@@ -93,7 +102,12 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Relational databases and relational query languages follow relational algebra which itself is built upon set theory. There are five fundamental operators in relational algebra, the set union, the set difference, the Cartesian product, the projection, and the selection, of which the only the last two are not borrowed from set theory. These operators act on relations which contain tuples (sets of tuples), as opposed to sets which contain elements (sets of elements). Each relation has a set of attributes from which the values of the tuples derive their domain.</p>
+<p>Relational databases and relational query languages follow relational algebra which itself is built
+    upon set theory. There are five fundamental operators in relational algebra, the set union, the set
+    difference, the Cartesian product, the projection, and the selection, of which the only the last
+    two are not borrowed from set theory. These operators act on relations which contain
+    tuples (sets of tuples), as opposed to sets which contain elements (sets of elements). Each relation
+    has a set of attributes from which the values of the tuples derive their domain.</p>
 
 </div>
 </div>
@@ -109,7 +123,21 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Relational algebra adjusts the operations of set theory with the intention of manipulating tabular data. Additional constraints are placed on set unions and differences whereby they can only be performed on relations which have the same set of attributes. Two relations which have the same set of attributes are said to be union-compatible.  The Cartesian product of two relations does not produce a set of 2-tuples containing a tuple from each relation but rather a set of flattened tuples, a concatenation of one tuple from each relation. A projection is a unary operation, one that acts on one relation, which constrains the relation to a subset of its attributes. This is conceptually similar to the projection in linear algebra which is also an idempotent operation, one which applied multiple times gives the same result. The selection operation, also a unary operation, subsets the relation according to a propositional formula (logical statement) whereby each tuple either is either true or false. In a table a projection can be thought of as a column (attribute) subset and a selection as a row (tuple) subset. One more fundamental operation exists which is the unary rename operation. The rename operation takes a specific attribute of a relation and renames it.</p>
+<p>Relational algebra adjusts the operations of set theory with the intention of manipulating
+    tabular data. Additional constraints are placed on set unions and differences whereby they
+    can only be performed on relations which have the same set of attributes. Two relations which
+    have the same set of attributes are said to be union-compatible.  The Cartesian product of
+    two relations does not produce a set of 2-tuples containing a tuple from each relation but
+    rather a set of flattened tuples, a concatenation of one tuple from each relation. A
+    projection is a unary operation, one that acts on one relation, which constrains the
+    relation to a subset of its attributes. This is conceptually similar to the projection in
+    linear algebra which is also an idempotent operation, one which applied multiple times
+    gives the same result. The selection operation, also a unary operation, subsets the
+    relation according to a propositional formula (logical statement) whereby each tuple
+    either is either true or false. In a table a projection can be thought of as a
+    column (attribute) subset and a selection as a row (tuple) subset. One more fundamental
+    operation exists which is the unary rename operation. The rename operation takes a
+    specific attribute of a relation and renames it.</p>
 
 </div>
 </div>
@@ -124,7 +152,22 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A table was originally proposed by Codd to be in first normal form if and only if all of its attribute domains did not contain any sets as elements. Thus an attribute’s domain can only contain atomic (indivisible) elements and the value of an attribute must be chosen as one and only one element of that domain. This definition of first normal form is problematic however because it requires the indivisibility of elements which is strictly conceptual. There is no rigorous implementation of atomicity. Consider the domain of all phone numbers. The elements themselves are divisible into integer digits and as such the domain can be considered to be a set of sets of digits. One could consider phone numbers to be indivisible (so there is no understanding of them containing digits) but this is both only conceptual in meaning and arbitrarily decided. Chris Date defined a table to be in first normal form if and only if it was a relation. Perhaps a more elegant solution, this definition imposes the following constraints. There is no ordering, either of rows or columns, there exist no duplicate rows, every attribute value is itself one and only one value from the domain, and all columns are regular. The last requirement, all columns are regular, means that each column has a unique name and is visible to every column operator. There can be no ‘special’ columns which function any differently from any other column.</p>
+<p>A table was originally proposed by Codd to be in first normal form if and only if all of its
+    attribute domains did not contain any sets as elements. Thus an attribute’s domain can only
+    contain atomic (indivisible) elements and the value of an attribute must be chosen as one and
+    only one element of that domain. This definition of first normal form is problematic however b
+    ecause it requires the indivisibility of elements which is strictly conceptual. There is no
+    rigorous implementation of atomicity. Consider the domain of all phone numbers. The elements
+    themselves are divisible into integer digits and as such the domain can be considered to be a
+    set of sets of digits. One could consider phone numbers to be indivisible (so there is no
+    understanding of them containing digits) but this is both only conceptual in meaning and
+    arbitrarily decided. Chris Date defined a table to be in first normal form if and only if it
+    was a relation. Perhaps a more elegant solution, this definition imposes the following
+    constraints. There is no ordering, either of rows or columns, there exist no duplicate rows,
+    every attribute value is itself one and only one value from the domain, and all columns are
+    regular. The last requirement, all columns are regular, means that each column has a unique
+    name and is visible to every column operator. There can be no ‘special’ columns which function
+    any differently from any other column.</p>
 
 </div>
 </div>
@@ -1221,7 +1264,11 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A relvar is in domain key normal form (DKNF) if and only if all constraints present are logical consequences of the relvar's keys and attribute domains. For most relational databases DKNF is the penultimate goal, which when accomplished prevents the database from becoming inconsistant via insert, update, and delete anomolies. Logical consequences of keys and domians are enforced by the RDBMS, such as being unable to insert a str type in a float type coloumn or update a table with a row that violates a unique key constraint.</p>
+<p>A relvar is in domain key normal form (DKNF) if and only if all constraints present are logical consequences of the
+    relvar's keys and attribute domains. For most relational databases DKNF is the penultimate goal,
+    which when accomplished prevents the database from becoming inconsistant via insert, update, and delete
+    anomolies. Logical consequences of keys and domians are enforced by the RDBMS, such as being unable to insert a
+    str type in a float type coloumn or update a table with a row that violates a unique key constraint.</p>
 
 </div>
 </div>
