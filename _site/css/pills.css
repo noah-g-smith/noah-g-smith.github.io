@@ -41,3 +41,6 @@
 
 .text-pill.rdb {background-color: #9B8A3D;}
 .text-pill.rdb::before {content: "RDB";}
+
+.text-pill.dw {background-color: #8080FF;}
+.text-pill.dw::before {content: "DATA WRANGLING";}

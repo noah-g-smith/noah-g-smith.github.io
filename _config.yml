@@ -12,6 +12,11 @@ author: Noah Smith
 
 project-items:
     [
+       ["ensemble", "Ensemble Classifiers", "pf_ensemble.png",
+            ["ml","python", "dw"],
+            "Elucidating the effectiveness of ensembles classifiers by comparing several classifier families.",
+            "strip_ensemble.png"],
+
         ["saengine", "Sentiment Analysis", "pf_saengine.jpg",
             ["nlp","dl","python","rdb"],
             "A web-based service delivering sentiment analysis from unstructured feedback data.",
