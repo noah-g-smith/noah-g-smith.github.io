@@ -12,7 +12,12 @@ author: Noah Smith
 
 project-items:
     [
-       ["ensemble", "Ensemble Classifiers", "pf_ensemble.png",
+       ["xception", "Xception & Computer Vision ", "pf_xception.png",
+            ["comp-vision", "dl","python"],
+            "Elucidating the effectiveness of ensembles classifiers by comparing several classifier families.",
+            "strip_xception.png"],
+
+        ["ensemble", "Ensemble Classifiers", "pf_ensemble.png",
             ["ml","python", "dw"],
             "Elucidating the effectiveness of ensembles classifiers by comparing several classifier families.",
             "strip_ensemble.png"],

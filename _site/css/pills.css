@@ -44,3 +44,7 @@
 
 .text-pill.dw {background-color: #8080FF;}
 .text-pill.dw::before {content: "DATA WRANGLING";}
+
+.text-pill.comp-vision {color: #000;}
+.text-pill.comp-vision {background-color: #EDDB85;}
+.text-pill.comp-vision::before {content: "COMP-VISION";}
