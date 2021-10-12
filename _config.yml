@@ -14,7 +14,7 @@ project-items:
     [
        ["xception", "Xception & Computer Vision ", "pf_xception.png",
             ["comp-vision", "dl","python"],
-            "Elucidating the effectiveness of ensembles classifiers by comparing several classifier families.",
+            "Exploring the benefits of convolution and residual neural networks for computer vision.",
             "strip_xception.png"],
 
         ["ensemble", "Ensemble Classifiers", "pf_ensemble.png",
